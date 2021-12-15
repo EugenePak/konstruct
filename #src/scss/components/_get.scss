@@ -1,0 +1,53 @@
+.get {
+    width: 100%;
+    height: 500px;
+    background-image: url("../../img/get-bg.png");
+    margin: 0;
+    &__main {
+        @include flex-center;
+        flex-direction: column;
+        height: 100%;
+    }
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--color-primary);
+        line-height: 36px;
+        letter-spacing: 0.15px;
+        width: 350px;
+        height: 72px;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+    &__link {
+        display: block;
+        padding: 9px 24px;
+    }
+}
+
+.news {
+    @include flex-center;
+    height: 100px;
+    width: 100%;
+    background-color: #171819;
+    margin: 0;
+    position: relative;
+    top: -3px;
+    &__title {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--color-w);
+        letter-spacing: 0.8px;
+        line-height: 25px;
+        margin-right: 70px;
+    }
+    &__input {
+        width: 250px;
+        height: 40px;
+        background-color: #fff;
+        padding-left: 16px;
+    }
+    &__btn {
+        padding: 11px 47px;
+    }
+}

@@ -1,0 +1,95 @@
+/*Решение кроссбраузерности
+шаг 1: очистим все отступы и границы*/
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/*шаг 2: обнуляем подсчет ширины блока для удобства верстки*/
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*шаг 3: убираем линии обводки*/
+
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+
+/*шаг 4: делаем элементы блочными*/
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+/*шаг 5: уравниваем поведение шрифтов и элементов в разных браузерах*/
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 20px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/*шаг 6: наследование семейства шрифта для тегов форм*/
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+/*шаг 7: убираем некоторые особенности и лишние отступы, чистим стили списков*/
+
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+/*шаг 8: обнуляем заголовки*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}

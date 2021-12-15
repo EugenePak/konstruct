@@ -1,0 +1,102 @@
+.header {
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 58px;
+    &__top {
+        @include flex-column;
+    }
+}
+
+.top-header {
+    background-image: url("../../img/header-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 770px;
+    width: 100%;
+    overflow: hidden;
+    &__logo {
+        padding-top: 41px;
+        text-transform: uppercase;
+        font-size: 28px;
+        color: var(--color-da);
+        text-align: center;
+        font-family: "BebasNeue", sans-serif;
+        font-weight: 700;
+        & span {
+            background-image: url("../../img/triangle.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            width: 9px;
+            height: 20px;
+        }
+    }
+    &__main {
+        padding: 0;
+        padding-top: 75px;
+    }
+    &__title {
+        font-size: 60px;
+        color: var(--color-w);
+        text-transform: uppercase;
+        font-family: "BebasNeue", sans-serif;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 5px;
+        line-height: 70px;
+    }
+    &__text {
+        text-align: center;
+        font-size: 16px;
+        line-height: 19px;
+        color: var(--color-w);
+        padding-top: 10px;
+    }
+    &__end {
+        color: var(--color-w);
+        padding-bottom: 70px;
+        text-align: center;
+        font-size: 11px;
+        line-height: 13px;
+        text-transform: uppercase;
+    }
+}
+
+.down-header {
+    @include flex-between;
+    height: 65px;
+    background-color: var(--color-w);
+    &__logo {
+        font-family: "BebasNeue", sans-serif;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: 700;
+        & span {
+            background-image: url("../../img/triangle-small.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            width: 9px;
+            height: 16px;
+        }
+    }
+    &__list {
+        @include flex-end;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+    &__link {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: 0.3s ease-in-out;
+        &:hover {
+            color: var(--color-second);
+            transition: 0.3s ease-in-out;
+        }
+    }
+}
